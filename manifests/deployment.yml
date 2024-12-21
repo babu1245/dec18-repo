@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: bdec21imageaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bdec21imageaks
+  template:
+    metadata:
+      labels:
+        app: bdec21imageaks 
+    spec:
+      containers:
+        - name: bdec21imageaks 
+          image: dec21registry.azurecr.io/bdec21imageaks
+          ports:
+          - containerPort: 80
