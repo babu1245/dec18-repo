@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: bdec21imageaks
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 80 
+    selector:
+        app: bdec21imageaks
